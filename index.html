@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accesorios de Mujer — Tienda</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Accesorios Mujer</h1>
+      <nav class="nav">
+        <button id="cartBtn" class="cart-btn" aria-label="Ver carrito">Carrito (<span id="cartCount">0</span>)</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Encuentra el accesorio perfecto</h2>
+        <p>Collares, bolsos, bufandas y más selección curada para cada estilo.</p>
+      </div>
+    </section>
+
+    <section class="controls container">
+      <div class="search">
+        <label for="searchInput" class="sr-only">Buscar productos</label>
+        <input id="searchInput" type="search" placeholder="Buscar (ej. collar, bolso, aro)...">
+      </div>
+
+      <div class="filters">
+        <label for="categorySelect">Categoría:</label>
+        <select id="categorySelect">
+          <option value="all">Todas</option>
+          <option value="collares">Collares</option>
+          <option value="bolsos">Bolsos</option>
+          <option value="aros">Aros</option>
+          <option value="bufandas">Bufandas</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="products container" id="productsGrid" aria-live="polite">
+      <!-- Productos renderizados por JS -->
+    </section>
+  </main>
+
+  <div id="cartModal" class="cart-modal" aria-hidden="true">
+    <div class="cart-content">
+      <button id="closeCart" class="close-cart" aria-label="Cerrar carrito">×</button>
+      <h3>Tu carrito</h3>
+      <ul id="cartList" class="cart-list"></ul>
+      <div class="cart-footer">
+        <div class="total">Total: $<span id="cartTotal">0.00</span></div>
+        <button id="clearCart" class="btn secondary">Vaciar carrito</button>
+        <button id="checkout" class="btn primary">Pagar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Accesorios Mujer — Hecho con ♥</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
